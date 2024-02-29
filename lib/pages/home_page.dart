@@ -16,7 +16,7 @@ class HomePageScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(top: 35),
+          padding: const EdgeInsets.only(top: 30),
           child: Stack(
             children: [
               Container(

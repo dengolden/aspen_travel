@@ -34,23 +34,28 @@ class DetailsPageScreen extends StatelessWidget {
                               left: 12,
                               top: 12,
                             ),
-                            child: Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(8),
-                                border: Border.all(width: 0.0),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  vertical: 10,
-                                  horizontal: 15,
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                              child: Container(
+                                width: 40,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8),
+                                  border: Border.all(width: 0.0),
                                 ),
-                                child: Icon(
-                                  Icons.arrow_back_ios,
-                                  color: Color(0xffB8B8B8),
-                                  size: 15,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    vertical: 10,
+                                    horizontal: 15,
+                                  ),
+                                  child: Icon(
+                                    Icons.arrow_back_ios,
+                                    color: Color(0xffB8B8B8),
+                                    size: 15,
+                                  ),
                                 ),
                               ),
                             ),
@@ -69,6 +74,7 @@ class DetailsPageScreen extends StatelessWidget {
                       height: 50,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
+                        color: Color(0xffF3F8FE),
                         boxShadow: [
                           BoxShadow(
                             color: Color(0xff0038FF).withOpacity(
@@ -78,14 +84,11 @@ class DetailsPageScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: FloatingActionButton(
-                        onPressed: () {},
-                        backgroundColor: Colors.white,
-                        shape: CircleBorder(),
-                        elevation: 0,
-                        child: Image.asset(
-                          'assets/heart_icon.png',
-                          width: 25,
+                      child: Icon(
+                        Icons.favorite,
+                        size: 35,
+                        color: Color(
+                          0xffEC5655,
                         ),
                       ),
                     ),
