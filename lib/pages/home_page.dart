@@ -1,4 +1,5 @@
 import 'package:aspen_travel/theme.dart';
+import 'package:aspen_travel/widgets/bot_navbar_item.dart';
 import 'package:aspen_travel/widgets/home_navrow.dart';
 import 'package:aspen_travel/widgets/home_popular.dart';
 import 'package:aspen_travel/widgets/home_recommended.dart';
@@ -143,6 +144,29 @@ class HomePageScreen extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(32),
           color: Color(0xffFEFEFE),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: 24,
+            horizontal: 70,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              BottomNavbarItem(
+                imageUrl: 'assets/Home.png',
+              ),
+              BottomNavbarItem(
+                imageUrl: 'assets/Ticket.png',
+              ),
+              BottomNavbarItem(
+                imageUrl: 'assets/Heart.png',
+              ),
+              BottomNavbarItem(
+                imageUrl: 'assets/Profile.png',
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

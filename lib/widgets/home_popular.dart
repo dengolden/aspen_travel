@@ -96,6 +96,29 @@ class PopularWidget extends StatelessWidget {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.only(
+            top: 200,
+            left: 148,
+          ),
+          child: Container(
+            width: 24,
+            height: 24,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+            ),
+            child: FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: Colors.white,
+              shape: CircleBorder(),
+              elevation: 0,
+              child: Image.asset(
+                'assets/heart_icon.png',
+                width: 11,
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }

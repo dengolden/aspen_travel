@@ -16,6 +16,12 @@ final List<Recommended> recommendedList = [
     imageUrl: 'assets/rec_2.png',
     duration: '2N/3D',
   ),
+  Recommended(
+    id: 3,
+    name: 'Explore Aspen',
+    imageUrl: 'assets/rec_1.png',
+    duration: '4N/5D',
+  ),
 ];
 
 class RecommendedWidgets extends StatelessWidget {

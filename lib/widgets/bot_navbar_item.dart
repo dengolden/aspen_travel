@@ -7,7 +7,7 @@ class BottomNavbarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       children: [
         Spacer(),
         Image.asset(
