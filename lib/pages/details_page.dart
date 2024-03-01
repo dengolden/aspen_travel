@@ -23,12 +23,14 @@ class DetailsPageScreen extends StatelessWidget {
                     child: Container(
                       width: 370,
                       height: 380,
+                      // MAIN IMAGE
                       child: Stack(
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(20),
                             child: Image.asset('assets/image.png'),
                           ),
+                          // BACK BUTTON
                           Padding(
                             padding: const EdgeInsets.only(
                               left: 12,
@@ -64,6 +66,7 @@ class DetailsPageScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  // FAVORITE ICON
                   Padding(
                     padding: const EdgeInsets.only(
                       top: 345,
@@ -98,6 +101,7 @@ class DetailsPageScreen extends StatelessWidget {
               SizedBox(
                 height: 1,
               ),
+              //DESKRIPSI
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -180,6 +184,7 @@ class DetailsPageScreen extends StatelessWidget {
               SizedBox(
                 height: 25,
               ),
+              //FACILITIES
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -228,63 +233,64 @@ class DetailsPageScreen extends StatelessWidget {
                   SizedBox(
                     height: 25,
                   ),
-                  Row(
+                ],
+              ),
+              //PRICE & BOOK NOW
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      Text(
+                        'Price',
+                        style: GoogleFonts.inter(
+                          color: primaryBlackColor,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                        ),
+                      ),
+                      Text(
+                        '\$199',
+                        style: montserratBoldTextStyle.copyWith(
+                          color: Color(0xff2DD7A4),
+                          fontSize: 30,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    width: 223,
+                    height: 54,
+                    decoration: BoxDecoration(
+                      color: blueColor,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Price',
-                            style: GoogleFonts.inter(
-                              color: primaryBlackColor,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 14,
+                            'Book Now',
+                            style: interBoldTextStyle.copyWith(
+                              fontSize: 18,
+                              color: Colors.white,
                             ),
                           ),
-                          Text(
-                            '\$199',
-                            style: montserratBoldTextStyle.copyWith(
-                              color: Color(0xff2DD7A4),
-                              fontSize: 30,
-                            ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Image.asset(
+                            'assets/arrow_right.png',
+                            width: 24,
                           ),
                         ],
                       ),
-                      Container(
-                        width: 223,
-                        height: 54,
-                        decoration: BoxDecoration(
-                          color: blueColor,
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: TextButton(
-                          onPressed: () {},
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Book Now',
-                                style: interBoldTextStyle.copyWith(
-                                  fontSize: 18,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Image.asset(
-                                'assets/arrow_right.png',
-                                width: 24,
-                              ),
-                            ],
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
+                    ),
+                  )
                 ],
               ),
             ],
