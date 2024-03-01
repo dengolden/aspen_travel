@@ -1,4 +1,3 @@
-import 'package:aspen_travel/pages/home_page.dart';
 import 'package:aspen_travel/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
